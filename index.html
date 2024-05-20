@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <link rel="icon" type="image/png" href="og.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="title" content="Age Guessed AI">
+                  <meta name="description" content="This is a basic AI which can guess your age based on the given prompt. This AI can often judge the messages based on description or prompt you have provided. This AI will do her best to guess your age based on the prompt your provides. Startup now start by guessing your age with this AI">
+                  <meta name="author" content="Foz dtx corp">
+                  <meta name="keywords" content="Age guesser ai, AI, Age guessing tool, Age guessing AI">
+                  <meta name="language" content="English">
+                  <meta name="robots" content="">
+                  <meta name="revisit-after" content="1">
+                  <meta name="sitemap" content="https://fozdtx.github.io/ageGuesser/sitemap.xml">
+                  <meta name="geo.region" content="India ">
+                  <meta name="geo.position" content="-">
+                  <meta name="geo.placename" content="Delhi">
+                  <meta name="geo.icbm" content="-">
+                  <meta name="rating" content="5 stars">
+                  <meta name="distribution" content="Free to use">
+                  <meta name="category" content="AI">
+                  <meta name="audience" content="AI">
+                  <meta name="targetCountry" content="India">
+                  <meta property="og:title" content="Age Guessing AI - Guess your age with AI">
+                  <meta property="og:description" content="Start up by guessing your age through AI. Get started for free of cost this AI is fully free start guessing your age now!">
+                  <meta property="og:image" content="https://fozdtx.github.io/ageGuesser/og.png">
+                  <meta name="twitter:title" content="Age Guessing AI - Guess your age with AI">
+                  <meta name="twitter:description" content="Start up by guessing your age through AI. Get started for free of cost this AI is fully free start guessing your age now!">
+                  <meta name="twitter:image" content="https://fozdtx.github.io/ageGuesser/og.png">
+
+  <title>Age Guesser</title>
+  
+  <!-- HTML -->
+  
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="lime-card lime-theme-arctic-white" style="height: 100px; width: 100%;font-size: 50px;display: flex;align-items: center;justify-content: center;">
+    
+      Age Guesser AI :)
+    
+  </div>
+  <br>
+  <br>
+  <div class="lime-card lime-theme-lavender" style="height: auto; width: 80%;padding: 10px;">
+    
+    Hi, Welcome! I can imagine and guess your age based on prompt, Try me a prompt and then see.
+    
+    </div>
+  <br>
+  <div id="mess">
+    
+    
+    
+  </div>
+  
+  
+  <div style="margin-top: 100%;">
+    
+    <input type="number" placeholder="maximum age for me to guess" class="lime-input" id="min"><br><br>
+    <input type="number" placeholder="minimum age for me to guess" class="lime-input" id="max">
+    <button class="lime-button lime-transition" id="guess">Guess</button>
+  </div>
+  
+  
+  <!-- Project -->
+  <script src="main.js"></script>
+  <script>
+  
+  var responses = ["I guessed your age!!", "Haha that's simple i guessed it!", "Yoo! I guessed your age.", "Hurray! I guessed it", "Hmm that's quite tough but i guessed it", "Yuppy i guessed it", "So easy i guessed ", "Aah i am again trying to guess it sk my current guess is that", "I have tried my best to guess your age and", "Haha i guessed so simply"];
+  //alert(responses.length);
+  
+  
+   function getRandomInt(min, max) {
+  // Ensure min and max are integers
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  // Generate random integer
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+    
+    var guess_btn = document.getElementById('guess');
+    var min = document.getElementById('min');
+    var max = document.getElementById('max');
+    var mess = document.getElementById('mess');
+    var rId = 1;
+    
+    
+    guess_btn.addEventListener('click', function(){
+      
+      
+      guess_btn.innerText = 'guessing...';
+      
+      
+      mess.innerHTML += '<div class="lime-card lime-theme-thistle" style="height: auto; width: 80%;padding: 10px;margin-left: 14%;">Ok my minimum age number is '+min.value+' and maximum age number is '+max.value+'. Now guess my age</div><br>';
+      
+      
+      setTimeout(function(){
+        mess.innerHTML += '<div class="lime-card lime-theme-lavender" style="height: auto; width: 80%;padding: 10px;" id="'+rId+'">...</div><br>';
+        
+        
+        var mi = parseInt(min.value);
+        var ma = parseInt(max.value);
+        var guess_Age = getRandomInt(mi, ma);
+        
+        setTimeout(function(){
+          var res = responses[getRandomInt(0, 9)];
+          
+          //document.getElementById(rId).innerHTML = 'I guessed your age, You are about ' + guess_Age + ' years old!!';
+          document.getElementById(rId).innerHTML = res + ' You are about ' + guess_Age + ' years old!!';
+          rId += 1;
+          guess_btn.innerText = 'Guess'
+        }, 1000);
+        
+      }, 1000);
+      
+      
+      
+      
+      
+    })
+   
+  </script>
+</body>
+</html>
