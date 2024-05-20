@@ -36,6 +36,394 @@
 
   <!-- Custom Styles -->
   <link rel="stylesheet" href="style.css">
+  <style>
+    body{
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  background: whitesmoke;
+}
+  .ripple-button {
+    position: relative;
+    overflow: hidden;
+    background: #6200EE;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 2px;
+    outline: none;
+    cursor: pointer;
+    transition: background 400ms;
+  }
+
+  .ripple-button span.ripple {
+    position: absolute;
+    border-radius: 50%;
+    transform: scale(0);
+    animation: ripple 600ms linear;
+    background-color: rgba(255, 255, 255, 0.7);
+  }
+
+  @keyframes ripple {
+    to {
+      transform: scale(4);
+      opacity: 0;
+    }
+  }
+  
+  
+  
+  
+  
+  
+  div input{
+    background: linear-gradient(white, #D6D6D6);
+    outline: none;
+    border: 2px solid silver;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 17px;
+    font-family: serif;
+    transition: 0.4s;
+  }
+  div input:focus{
+    border: 3px solid #979797;
+  }
+  
+  
+  
+  
+  
+  
+  /*
+* LIME UF - Lightweight Interface Module for Web Development
+*
+* Developer: FOZ DTX CORP
+* License: MIT
+*
+* Description:
+* LIME UF is a user interface framework designed to streamline web development
+* with a focus on simplicity and efficiency. This framework provides a robust
+* set of tools and components to build modern, responsive web applications
+* with ease.
+*
+* Usage:
+* Permission is hereby granted, free of charge, to any person obtaining a copy
+* of this software and associated documentation files (the "Software"), to deal
+* in the Software without restriction, including without limitation the rights
+* to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+* copies of the Software, and to permit persons to whom the Software is
+* furnished to do so, subject to the following conditions:
+*
+* The above copyright notice and this permission notice shall be included in
+* all copies or substantial portions of the Software.
+*
+* THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+* IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+* FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+* AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+* LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+* OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+* SOFTWARE.
+*/
+
+
+
+
+@font-face {
+
+  font-family: Raleway;
+  src: url("installed/fonts/Raleway-Regular.ttf");
+
+}
+
+@font-face {
+
+  font-family: Oswald;
+  src: url("installed/fonts/Oswald-Regular.ttf");
+
+}
+
+@font-face {
+
+  font-family: Writing;
+  src: url("installed/fonts/Writing.otf");
+
+}
+
+@font-face {
+
+  font-family: Ubuntu_Mono;
+  src: url("installed/fonts/UbuntuMono_R.ttf");
+
+}
+
+@font-face {
+
+  font-family: Ubuntu;
+  src: url("installed/fonts/Ubuntu-M.ttf");
+
+}
+
+@font-face {
+
+  font-family: Ubuntu_C;
+  src: url("installed/fonts/Ubuntu-C.ttf");
+
+}
+
+@font-face {
+
+  font-family: RobotoCondensed;
+  src: url("installed/fonts/RobotoCondensed-Regular.ttf");
+
+}
+
+@font-face {
+
+  font-family: RobotoCondensed_Intalic;
+  src: url("installed/fonts/RobotoCondensed-Italic.ttf");
+
+}
+
+@font-face {
+
+  font-family: Outdoor;
+  src: url("installed/fonts/Outdoor.otf");
+
+}
+
+@font-face {
+
+  font-family: Metropolis;
+  src: url("installed/fonts/Metropolis-Regular.ttf");
+
+}
+
+@font-face {
+
+  font-family: good_times;
+  src: url("installed/fonts/good times rg.otf");
+
+}
+
+@font-face {
+
+  font-family: GlacialIndifference;
+  src: url("installed/fonts/GlacialIndifference-Regular.otf");
+
+}
+
+@font-face {
+
+  font-family: Exo;
+  src: url("installed/fonts/Exo-Regular.otf");
+
+}
+
+@font-face {
+
+  font-family: Coolvetica;
+  src: url("installed/fonts/coolvetica rg.otf");
+
+}
+
+@font-face {
+
+  font-family: AxelBrush;
+  src: url("installed/fonts/AxelBrush-Regular.ttf");
+
+}
+
+
+
+
+
+
+
+
+
+/*
+
+LIME BUTTONS
+
+*/
+.lime-button {
+  min-height: 30px;
+  min-width: 100PX;
+  max-height: 300px;
+  max-width: 1000PX;
+  background: linear-gradient(#5AB45B, #429442);
+  border: 0px;
+  cursor: pointer;
+  border-radius: 2px;
+  border-top: 1px solid #67BC68;
+  outline: 1px solid green;
+  font-weight: 400;
+  font-size: 18px;
+  text-shadow: 0px -1px 0px green;
+  color: white;
+  font-family: Helvetica;
+  -webkit-tap-highlight-color: transparent;
+}
+.lime-button:hover{
+  min-height: 30px;
+  min-width: 100PX;
+  max-height: 300px;
+  max-width: 1000PX;
+  background: linear-gradient(#4CA34C, #428C42);
+  border: 0px;
+  cursor: pointer;
+  border-radius: 2px;
+  border-top: 1px solid #57A657;
+  outline: 1px solid green;
+  /* font-weight: bold; */
+  font-size: 18px;
+  text-shadow: 0px -1px 0px green;
+  color: white;
+  font-family: Arial;
+}
+
+
+
+
+
+.btn {
+  display: inline-block;
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  background-color: #2cbe4e;
+  border: 1px solid rgba(27,31,35,0.2);
+  border-radius: 3px;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.btn:hover {
+  background-color: #2ea44f;
+  border-color: rgba(27,31,35,0.35);
+}
+
+
+
+
+
+/*
+themes for lime application
+*/
+
+.theme-grad-orange{
+  background: linear-gradient(orange, darkorange);
+  border-color: #FFEAAF;
+  outline-color: orangered;
+  text-shadow: 0px -1px orangered;
+}
+
+
+.theme-grad-orange-hover{
+  
+}
+.theme-grad-orange-hover:hover{
+  background: linear-gradient(darkorange, darkorange);
+  border-color: darkorange;
+  outline-color: orangered;
+  text-shadow: 0px -1px orangered;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+cards
+*/
+
+.lime-card{
+  height: 400px;
+  width: 300px;
+  background: whitesmoke;
+  color: #363636;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  font-family: 'Raleway';
+}
+
+
+
+
+
+
+
+
+
+
+
+/*
+lime input
+*/
+.lime-input{
+  height: 30px;
+  border-radius: 3px;
+  color: #363636;
+  font-family: 'Raleway';
+  font-size: 18px;
+  outline: none;
+  padding-left: 10px;
+  border: 1px solid #959595;
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5);
+}
+
+.lime-input:hover{
+  border-color: #757575;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+}
+
+
+
+
+
+
+
+
+
+
+
+.lime-transition{
+  transition: 0.3s;
+}
+
+
+.lime-theme-arctic-white{
+  background: #E2E3DD;
+}
+
+
+.lime-theme-thistle{
+  /*background: #E3E3ED;*/
+  background: #C3BBD2; this
+}
+
+
+.lime-theme-lavender{
+  background: #E5E5EF;
+}
+
+
+.lime-theme-white{
+  background: #FFFFFF;
+}
+  </style>
 </head>
 
 <body>
